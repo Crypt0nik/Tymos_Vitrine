@@ -8,14 +8,25 @@
     font-family: "Inter";
     background-color: #E9EDDE;
     z-index: -2;
-    overflow: hidden;
-}
+    
+  }
+  
 com360 et preuves com finit, 
 
 html {
     scroll-behavior: smooth;
     height: 200vh;
-    ;
+    overflow: hidden;
+}
+
+header {
+    padding: 20px;
+    
+}
+
+body {
+    background-color: #E9EDDE;
+    overflow: hidden;
 }
 
 .videoo {
@@ -27,6 +38,18 @@ html {
     mix-blend-mode: multiply;
     pointer-events: none;
     
+}
+
+.igm1, .igm2 {
+    
+    z-index: 3892;
+}
+
+.igm1:hover, .igm2:hover {
+    filter: invert(100%);
+    transition: filter 0.3s ease;
+    border-radius: 7px;
+    z-index: 999;
 }
 
 
@@ -57,7 +80,7 @@ html {
     
 }
 
-.tele2 {
+.image3D {
     display: none;
 }
 
@@ -79,8 +102,9 @@ html {
 .btnlogo {
     z-index: 389;
     margin-left: 100px;
-    
 }
+
+
 
 .btnapp:hover {
     background-color: black;
@@ -120,6 +144,35 @@ h1 {
 .section1 {
     padding-left: 130px;
 }
+
+/* Le conteneur : on définit la perspective ici */
+.perspective-container {
+    width: 300px;         /* ou la taille que tu veux */
+    height: auto;         /* s’adapte à l’image */
+    perspective: 1000px;  /* plus la valeur est petite, plus l’effet 3D est prononcé */
+    margin: 0 auto;       /* pour centrer, si besoin */
+  }
+  
+  /* L’image qui subit la rotation 3D */
+  .image3D {
+    width: 100%;          /* ou toute autre taille */
+    transform-style: preserve-3d;
+    animation: float3D 6s ease-in-out infinite alternate;
+  }
+  
+  /* Animation : rotation légère sur X et Y, + un petit "zoom" en Z */
+  @keyframes float3D {
+    0% {
+      transform: translateZ(0) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+      transform: translateZ(20px) rotateX(2deg) rotateY(-2deg);
+    }
+    100% {
+      transform: translateZ(0) rotateX(0deg) rotateY(0deg);
+    }
+  }
+  
 
 /* Media Queries for Mobile Devices */
 @media screen and (max-width: 768px) {
@@ -202,7 +255,7 @@ h1 {
         height: 130px;
     }
 
-    .tele2 {
+    .image3D {
         display: block;
         margin: 0 auto;
         transform: scale(0.8);
@@ -220,7 +273,13 @@ h1 {
     .igm1, .igm2 {
         margin-top: -20px;        
         margin-left: 70px;
+        z-index: 3892;
+    }
 
+    .igm1:hover, .igm2:hover {
+        filter: invert(100%);
+        transition: filter 0.3s ease;
+        border-radius: 5px;
     }
 
 }
