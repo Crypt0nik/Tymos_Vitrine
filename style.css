@@ -17,15 +17,22 @@ html {
     scroll-behavior: smooth;
     height: 200vh;
     
+    
 }
 
 header {
     padding: 20px;
+
     
+}
+
+.petittel {
+    display: none;
 }
 
 body {
     background-color: #E9EDDE;
+    overflow-x: hidden;
     
 }
 
@@ -101,8 +108,10 @@ body {
     margin-left: 100px;
 }
 
-.image3D {
+
+.pourtel {
     max-width: 100%;
+    ;
 }
 
 
@@ -116,6 +125,10 @@ h1 {
     font-weight: 600;
     color: black;
     margin-top: 60px;
+}
+
+.tele {
+    max-width: 100%;
 }
 
 .logog {
@@ -145,38 +158,17 @@ h1 {
     padding-left: 130px;
 }
 
-/* Le conteneur : on définit la perspective ici */
-.perspective-container {
-    width: 300px;         /* ou la taille que tu veux */
-    height: auto;         /* s’adapte à l’image */
-    perspective: 10px;  /* plus la valeur est petite, plus l’effet 3D est prononcé */
-    margin: 0 auto;       /* pour centrer, si besoin */
-  }
-  
-  /* L’image qui subit la rotation 3D */
-  .image3D img {
-    width: 100%;          /* ou toute autre taille */
-    transform-style: preserve-3d;
-    animation: float3D 6s ease-in-out infinite alternate;
-  }
-  
-  /* Animation : rotation légère sur X et Y, + un petit "zoom" en Z */
-  @keyframes float3D {
-    0% {
-      transform: translateZ(0) rotateX(0deg) rotateY(0deg);
-    }
-    50% {
-      transform: translateZ(2000px) rotateX(200deg) rotateY(-200deg);
-    }
-    100% {
-      transform: translateZ(0) rotateX(0deg) rotateY(0deg);
-    }
-  }
   
 
 /* Media Queries for Mobile Devices */
 @media screen and (max-width: 768px) {
    
+    body {
+        overflow-x: hidden;
+        
+        background-color: #E9EDDE;
+    }
+
     .nav2 {
         z-index: 99;
         display: flex;
@@ -209,25 +201,11 @@ h1 {
         
     }
 
-
-    .tele {
-        display: block;
-        margin: 0 auto;
-        transform: scale(5);
-        margin-top: 600px;
-        margin-left: -110px;
-        
-    }
-
     .section1 {
         margin-top: -30px;
         text-align:left;
         padding-left: 0px;
         
-    }
-
-    .image3D img {
-        display: none;
     }
 
     h1 {
@@ -244,9 +222,19 @@ h1 {
         width: 100%;
 
     }
-    
-    .section2 {
+
+    .tele img {
         display: none;
+    }
+
+    .tele {
+        display: none;
+    }
+
+    .petittel {
+        display: block;
+        max-width: 100%;
+        margin-left: 15%;
     }
 
     .p1 {
@@ -260,19 +248,10 @@ h1 {
         height: 130px;
     }
 
-    .image3D {
-        display: block;
-        margin: 0 auto;
-        transform: scale(0.8);
-        margin-left: 30px;
-        margin-top: -30px;
-    }
+
 
     .madein {
-        position: absolute;
-        transform: scale(0.1);
-        margin-top: -230px;
-        margin-left: -280px;
+        display: none;
     }
 
     .igm1, .igm2 {
