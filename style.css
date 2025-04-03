@@ -12,11 +12,11 @@
   }
   
 com360 et preuves com finit, 
-
+finit com360 chiffrement de tout en com 
 html {
     scroll-behavior: smooth;
     height: 200vh;
-    overflow: hidden;
+    
 }
 
 header {
@@ -26,7 +26,7 @@ header {
 
 body {
     background-color: #E9EDDE;
-    overflow: hidden;
+    
 }
 
 .videoo {
@@ -80,9 +80,6 @@ body {
     
 }
 
-.image3D {
-    display: none;
-}
 
 .btnapp {
     outline: solid 1px #000;
@@ -104,6 +101,9 @@ body {
     margin-left: 100px;
 }
 
+.image3D {
+    max-width: 100%;
+}
 
 
 .btnapp:hover {
@@ -149,12 +149,12 @@ h1 {
 .perspective-container {
     width: 300px;         /* ou la taille que tu veux */
     height: auto;         /* s’adapte à l’image */
-    perspective: 1000px;  /* plus la valeur est petite, plus l’effet 3D est prononcé */
+    perspective: 10px;  /* plus la valeur est petite, plus l’effet 3D est prononcé */
     margin: 0 auto;       /* pour centrer, si besoin */
   }
   
   /* L’image qui subit la rotation 3D */
-  .image3D {
+  .image3D img {
     width: 100%;          /* ou toute autre taille */
     transform-style: preserve-3d;
     animation: float3D 6s ease-in-out infinite alternate;
@@ -166,7 +166,7 @@ h1 {
       transform: translateZ(0) rotateX(0deg) rotateY(0deg);
     }
     50% {
-      transform: translateZ(20px) rotateX(2deg) rotateY(-2deg);
+      transform: translateZ(2000px) rotateX(200deg) rotateY(-200deg);
     }
     100% {
       transform: translateZ(0) rotateX(0deg) rotateY(0deg);
@@ -209,6 +209,7 @@ h1 {
         
     }
 
+
     .tele {
         display: block;
         margin: 0 auto;
@@ -223,6 +224,10 @@ h1 {
         text-align:left;
         padding-left: 0px;
         
+    }
+
+    .image3D img {
+        display: none;
     }
 
     h1 {
